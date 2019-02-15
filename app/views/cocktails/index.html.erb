@@ -1,0 +1,21 @@
+
+<div class="navbar-wagon">
+  <h1>Cocktails</h1><i class="fas fa-cocktail"></i>
+  <%= link_to "Create a cocktail", new_cocktail_path, class: 'btn btn-primary' %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-6 col-sm-4">
+      <div class="card-image" style="background-image:url(<%= cocktail.cocktail_image_url %>)"></div>
+      <div class="card-content">
+        <h3><%= cocktail.name %></h3>
+      </div>
+      <div class="card-actions">
+        <span class="info"><%= link_to "Read the recipe", cocktail_path(cocktail) %></span>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="navbar-wagon">
+  <h1>Cocktails</h1><i class="fas fa-cocktail"></i>
+  <p><%= link_to "Back to the list", cocktails_path, class: 'btn btn-primary' %></p>
+</div>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @cocktail.cocktail_image_url %>);">
+  <div class="container">
+    <h1>Make a <%= @cocktail.name %></h1>
+  </div>
+</div>
+
+<div class="container show-container">
+  <div class="container">
+    <h3>Here's what you'll need:</h3>
+    <% @doses.each do |dose| %>
+      <p><%= "#{dose.ingredient.name} - #{dose.description}" %>
+      <%= link_to cocktail_dose_path(dose), method: :delete, data: { confirm: "Are you sure ? "} do %>
+          <i class="far fa-trash-alt"></i></p>
+        <% end %>
+    <% end %>
+  </div>
+
+  <div class="container links">
+    <p><%= link_to new_cocktail_dose_path(@cocktail.id) do %>
+      <i class="fas fa-plus"></i>
+      <% end %>
+    </p>
+
+
+  </div>
+</div>

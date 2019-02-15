@@ -1,0 +1,48 @@
+.container {
+  display: block;
+  margin-top: 20px;
+}
+
+.card-image {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  margin-top: 20px;
+  box-shadow: 1px -1px 4px #1D444F;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.card-content {
+  background: #d7f7f5;
+  margin-top: 0px;
+  padding: 5px;
+  box-shadow: 1px 1px 4px #1D444F;
+}
+
+.card-actions {
+  box-shadow: 1px 1px 4px #1D444F;
+  background: #75cac3;
+  padding: 20px;
+  border-radius: 0px 0px 3px 3px;
+}
+
+h3 {
+  padding-left: 10px;
+  padding-bottom: 20px;
+  color: #1D444F;
+}
+
+p {
+  padding-left: 10px;
+}
+
+span {
+  margin-right: 10px;
+  a {
+    color: #1D444F;
+  }
+}
+
