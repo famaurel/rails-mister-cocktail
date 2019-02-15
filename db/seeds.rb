@@ -5,10 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Ingredient.destroy_all
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 
-Cocktail.create(
-  name: "White Russian",
-  cocktail_image_url: "https://images.pexels.com/photos/45237/cocktail-glass-glass-strawberry-cream-45237.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
+Cocktail.destroy_all
+
+url = "https://res.cloudinary.com/dwsnzdr34/image/upload/v1550237417/vqgk9ogqnmlprclnsp3n.jpg"
+ cocktail = Cocktail.new(name: 'Cuba Libre')
+ cocktail.remote_photo_url = url
+cocktail.save
