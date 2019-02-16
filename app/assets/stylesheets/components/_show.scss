@@ -1,21 +1,29 @@
 .show-container {
-  background: #D7F7F5;
-  width: 450px;
+  background: $yellow;
+  width: 600px;
   padding: 20px;
-  margin-top: 30px;
+  margin-top: 60px;
   border-radius: 3px;
   box-shadow: 2px 2px 5px #1D444F;
-  color: #1D444F;
+  color: $blue;
   h1 {
     margin-bottom: 20px;
     margin-top: 0px;
   }
-
   a {
-    color: #296171;
+    color: $blue;
   }
-
+  i.delete {
+  padding-left: 15px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  p {
+  font-size: 20px;
+  color: $blue;
+  opacity: .7;
+  }
   .links {
     margin-top: 20px;
   }
 }
+

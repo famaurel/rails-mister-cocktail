@@ -1,27 +1,30 @@
 /* Main navbar */
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+  background: #F7F7F7;
   transition: all 0.3s ease;
   height: 75px;
   padding: 0px 30px;
   display: flex;
+  color: $blue;
   align-items: center;
   justify-content: space-between;
+  font-family: 'Raleway', sans-serif;
   p {
     margin: 0px;
-    color: #233142;
+
   }
   h1 {
     margin: 0px;
-    color: #1D444F;
+
+    font-family: 'Poiret One', cursive;
   }
   i {
     font-size: 35px;
-    color: #1D444F;
+
   }
   a {
-    color: white;;
+    color: $blue;
   }
 }
 

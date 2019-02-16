@@ -1,5 +1,7 @@
 .container {
   display: block;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
 }
 
 .card-image {
@@ -12,35 +14,39 @@
   margin-top: 20px;
   box-shadow: 1px -1px 4px #1D444F;
   border-radius: 3px 3px 0px 0px;
+  position: relative;
   h3 {
+    font-family: 'Raleway', sans-serif;
     padding-left: 10px;
     padding-top: 20px;
-    color: white;
   }
 }
 
-.card-content {
-  background: #d7f7f5;
-  margin-top: 0px;
-  padding: 5px;
-  box-shadow: 1px 1px 4px #1D444F;
+.dose {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  font-size: 17px;
+  opacity: 0.8;
+  font-weight: lighter;
 }
 
-.card-actions {
+.card-info {
   box-shadow: 1px 1px 4px #1D444F;
-  background: white;
-  padding: 20px;
+  background: $yellow;
   border-radius: 0px 0px 3px 3px;
-}
-
-p {
-  padding-left: 10px;
-}
-
-span {
-  margin-right: 10px;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  p {
+    margin: 0px;
+  }
   a {
-    color: #1D444F;
+    margin: 10px;
+    color: $blue;
+
   }
 }
+
 

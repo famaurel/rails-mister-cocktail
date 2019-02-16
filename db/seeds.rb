@@ -28,4 +28,3 @@ drink_names = drinks["drinks"]
 drink_names.each do |drink_name|
   Ingredient.create(name: drink_name["strIngredient1"])
 end
-

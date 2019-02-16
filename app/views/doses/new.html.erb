@@ -1,11 +1,14 @@
+<div class="navbar-wagon">
+  <h1>Cocktails</h1><i class="fas fa-cocktail"></i>
+  <%= link_to "Back to #{@cocktail.name}", cocktail_path(@cocktail), class: 'btn btn-primary' %>
+</div>
+
 <div class="container form-container">
   <h1>Add a dose to your cocktail</h1>
   <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :amount %>
-    <%= f.input :description %>
+    <%= f.input :description, label: 'Unit' %>
     <%= f.association :ingredient %>
     <%= f.button :submit %>
   <% end %>
 </div>
-
-<button class="btn btn-primary"><%= link_to "Back to cocktail", cocktail_path(@cocktail) %></button>
