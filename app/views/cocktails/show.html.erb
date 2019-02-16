@@ -13,11 +13,10 @@
   <div class="container">
     <h3>Here's what you'll need:</h3>
     <% @doses.each do |dose| %>
-      <p><%= "#{dose.ingredient.name} - #{dose.description}" %>
-      <i id="sweet-alert-demo" class="far fa-trash-alt"></i>
-      <%= link_to cocktail_dose_path(dose), method: :delete, id: "delete-link" do %>
+      <p><%= "#{dose.ingredient.name} - #{dose.amount} #{dose.description}" %>
+      <a> <i id="sweet-alert-demo" class="far fa-trash-alt"></i></a>
+      <%= link_to "", cocktail_dose_path(dose), method: :delete, id: "delete-link"%>
         </p>
-      <% end %>
     <% end %>
   </div>
 

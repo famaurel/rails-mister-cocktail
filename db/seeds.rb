@@ -5,14 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Ingredient.destroy_all
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
+
+require 'json'
+require 'open-uri'
 
 Cocktail.destroy_all
 
-url = "https://res.cloudinary.com/dwsnzdr34/image/upload/v1550237417/vqgk9ogqnmlprclnsp3n.jpg"
- cocktail = Cocktail.new(name: 'Cuba Libre')
- cocktail.remote_photo_url = url
+url = 'https://res.cloudinary.com/dwsnzdr34/image/upload/v1550237417/vqgk9ogqnmlprclnsp3n.jpg'
+cocktail = Cocktail.new(name: 'Cuba Libre')
+cocktail.remote_photo_url = url
 cocktail.save
+
+Ingredient.destroy_all
+
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+
+json = open(url).read
+drinks = JSON.parse(json).sort.to_h
+
+drink_names = drinks["drinks"]
+
+drink_names.each do |drink_name|
+  Ingredient.create(name: drink_name["strIngredient1"])
+end
+
