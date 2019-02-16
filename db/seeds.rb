@@ -11,10 +11,10 @@ require 'open-uri'
 
 Cocktail.destroy_all
 
-url = 'https://res.cloudinary.com/dwsnzdr34/image/upload/v1550237417/vqgk9ogqnmlprclnsp3n.jpg'
-cocktail = Cocktail.new(name: 'Cuba Libre')
-cocktail.remote_photo_url = url
-cocktail.save
+# url = 'https://res.cloudinary.com/dwsnzdr34/image/upload/v1550237417/vqgk9ogqnmlprclnsp3n.jpg'
+# cocktail = Cocktail.new(name: 'Cuba Libre')
+# cocktail.remote_photo_url = url
+# cocktail.save
 
 Ingredient.destroy_all
 
