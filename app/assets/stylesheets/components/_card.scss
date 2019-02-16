@@ -2,6 +2,7 @@
   display: block;
   justify-content: center;
   font-family: 'Raleway', sans-serif;
+  margin-bottom: 20px;
 }
 
 .card-image {
@@ -12,7 +13,7 @@
   color: white;
   position: relative;
   margin-top: 20px;
-  box-shadow: 1px -1px 4px #1D444F;
+  box-shadow: 1px -1px 5px rgba(37, 40, 57, 0.3);
   border-radius: 3px 3px 0px 0px;
   position: relative;
   h3 {
@@ -33,7 +34,7 @@
 }
 
 .card-info {
-  box-shadow: 1px 1px 4px #1D444F;
+  box-shadow: 1px 1px 5px rgba(37, 40, 57, 0.3);
   background: $yellow;
   border-radius: 0px 0px 3px 3px;
   text-align: center;
@@ -45,7 +46,6 @@
   a {
     margin: 10px;
     color: $blue;
-
   }
 }
 
